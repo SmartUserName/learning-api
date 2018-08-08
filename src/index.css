@@ -1,0 +1,50 @@
+h2{
+  margin: 0px;
+  padding: 3px 0px;
+  background-color: rgba(255, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+h3{
+  margin: 15px 10px 0px 10px;
+  padding: 8px 0px 0px 0px;
+}
+
+body {
+  background-color: #E2E0E0;
+}
+
+.Article {
+  background-color: white;
+  margin: 1% 15%;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#header {
+  color: white;
+  margin: 0px 0px 15px 0px;
+}
+
+.IconStyle {
+  margin: 0px 5px;
+  padding: 1px;
+  width: 20px;
+  height: 20px;
+}
+
+.IconStyle:hover{
+  background-color: rgba(0, 55, 55, 0.2);
+}
+
+.ArticleImg{
+  max-width: 100%;
+  height: auto;
+}
+
+.ArticleText{
+  margin: 0px;
+  padding: 5px;
+}

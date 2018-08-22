@@ -1,12 +1,11 @@
-import React, { Component } from "react";
-import axios from "axios";
-import Header from "./Header.js";
+import React, { Component } from 'react';
+import axios from 'axios';
+import Header from './Header.js';
 import { Loading } from './Loading.js';
 import {
     urlArrowUpImg,
     urlRefreshImg
-} from "./External-imgs.js";
-
+} from './External-imgs.js';
 
 const url = 'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=f77c754a4f3743afb33f2579bf3c7cbf';
 
@@ -17,7 +16,7 @@ class App extends Component {
             articles: [],
             isLoading: false,
             error: null
-        }
+        };
 
         this.handleRefresh = this.handleRefresh.bind(this);
         this.fetchBbcData = this.fetchBbcData.bind(this);
@@ -37,12 +36,10 @@ class App extends Component {
 
     componentDidMount() {
         this.fetchBbcData();
-
     }
 
     render() {
         const { articles, isLoading, error } = this.state;
-
 
         return (
             <div className="App">

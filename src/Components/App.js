@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Header from "../Header/Header.js";
-import { Loading } from '../Loading/Loading.js';
+import Header from "./Header.js";
+import { Loading } from './Loading.js';
 import {
     urlArrowUpImg,
     urlRefreshImg
-} from "../External-imgs/External-imgs.js";
+} from "./External-imgs.js";
 
 
 const url = 'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=f77c754a4f3743afb33f2579bf3c7cbf';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { urlSpinnerImg } from '../External-imgs/External-imgs';
+import { urlSpinnerImg } from './External-imgs';
 
 
 const Loading = () =>{

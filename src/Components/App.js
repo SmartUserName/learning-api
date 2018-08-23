@@ -7,14 +7,14 @@ import {
     urlRefreshImg
 } from './External-imgs.js';
 
-const url = 'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=f77c754a4f3743afb33f2579bf3c7cbf';
-
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
             articles: [],
             isLoading: false,
+            url: this.props.location.state.item.apiUrl,
+            source: this.props.location.state.item.name,
             error: null
         };
 
@@ -28,10 +28,9 @@ class App extends Component {
 
     fetchBbcData() {
         this.setState({ isLoading: true });
-        axios(url)
+        axios(this.state.url)
             .then(data => this.setState({ articles: data.data.articles || [], isLoading: false, error: null }))
             .catch(error => this.setState({ error, isLoading: false }))
-
     }
 
     componentDidMount() {
@@ -39,12 +38,12 @@ class App extends Component {
     }
 
     render() {
-        const { articles, isLoading, error } = this.state;
+        const { articles, isLoading, error, source } = this.state;
 
         return (
             <div className="App">
                 <Header src={ urlRefreshImg } onClick={ this.handleRefresh } >
-                    Top headlines from BBC News
+                    Top {source} headlines
                 </Header>
                 {isLoading
                     ? <Loading className="IconStyle" />
